@@ -95,7 +95,6 @@ const PaymentForm = () => {
               <input
                 type="text"
                 className="w-full p-2 border border-gray-700 rounded bg-gray-800"
-                placeholder="Enter amount"
                 value={depositAmount}
                 onChange={(e) => setDepositAmount(e.target.value)}
               />
@@ -153,7 +152,6 @@ const PaymentForm = () => {
               className="w-full p-2 border border-gray-700 rounded bg-gray-800"
               value={walletNumber}
               onChange={(e) => setWalletNumber(e.target.value)}
-              placeholder="Enter wallet number"
             />
           </div>
 
@@ -223,7 +221,6 @@ const PaymentForm = () => {
             <input
               type="text"
               className="w-full p-2 border border-gray-700 rounded bg-gray-800"
-              placeholder="Enter wallet number"
               value={walletNumberBK}
               onChange={(e) => setWalletNumberBK(e.target.value)}
             />
@@ -265,7 +262,6 @@ const PaymentForm = () => {
             <input
               type="text"
               className="w-full p-2 border border-gray-700 rounded bg-gray-800"
-              placeholder="Enter comment"
               value={commentFieldPayment}
               onChange={(e) => setCommentFieldPayment(e.target.value)}
             />
