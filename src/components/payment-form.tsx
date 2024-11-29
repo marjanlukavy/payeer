@@ -18,7 +18,6 @@ const PaymentForm = () => {
     paymentStatus,
     customCommentField,
     hideRedText1,
-    rotateIcon,
     customPaymentType,
     setBlockedBalance,
     setActiveBalance,
@@ -36,7 +35,6 @@ const PaymentForm = () => {
     setCommentFieldPayment,
     setPaymentStatus,
     setHideRedText1,
-    setRotateIcon,
     setCustomPaymentType,
   } = usePaymentStore();
 
