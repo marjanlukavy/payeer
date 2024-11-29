@@ -38,7 +38,7 @@ const PaymentForm = () => {
     setCustomPaymentType,
   } = usePaymentStore();
 
-  const tags = ["Payeer", "Tether"];
+  const tags = ["Payeer", "Tether", "MIR", "Mastercard", "Visa"];
   const paymentTypeOptions = [
     "Payment of Commission",
     "Deposit payment",
@@ -205,17 +205,13 @@ const PaymentForm = () => {
                 ))}
               </div>
             </div>
-            <input
-              type="text"
-              className="w-40 px-3 py-2 border border-gray-700 rounded bg-gray-800 outline-none"
-              value={outputSystem}
-              readOnly
-            />
           </div>
 
           {/* Wallet Number BK */}
           <div>
-            <label className="block text-sm mb-1">Номер кошелька БК</label>
+            <label className="block text-sm mb-1">
+              Номер кошелька компании
+            </label>
             <input
               type="text"
               className="w-full p-2 border border-gray-700 rounded bg-gray-800"

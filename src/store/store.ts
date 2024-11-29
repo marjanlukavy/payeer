@@ -56,7 +56,7 @@ const usePaymentStore = create<PaymentStore>((set) => ({
   outputSystem: "Payeer",
   commentField: "Comment to payment:",
   customCommentField: "Comment to payment:",
-  commentFieldPayment: "",
+  commentFieldPayment: "-",
   paymentStatus: "Waiting for payment",
   hideRedText1: false,
   setRotateIcon: (value) => set({ rotateIcon: value }),
