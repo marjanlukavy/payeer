@@ -48,7 +48,7 @@ const Info = () => {
           </div>
           {/* Info Section */}
           <div className="grid grid-cols-2 gap-2 text-white min-w-[404px]  mx-auto w-full">
-            <div className="flex flex-col items-end">
+            <div className="flex flex-col items-end gap-2">
               <span className="font-inter font-medium text-[16px] leading-[24px] text-[#9D9DA1]">
                 Amount of Payeer:
               </span>
@@ -63,7 +63,7 @@ const Info = () => {
               </span>
             </div>
 
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start  gap-2">
               <span className="font-inter text-[16px] leading-[24px] text-[#fff]">
                 {depositAmount} {currency}
               </span>{" "}
