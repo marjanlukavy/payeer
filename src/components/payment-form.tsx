@@ -40,7 +40,7 @@ const PaymentForm = () => {
     setCustomPaymentType,
   } = usePaymentStore();
 
-  const tags = ["Payeer", "Advcash", "Qiwi", "Webmoney"];
+  const tags = ["Payeer", "Tether"];
   const paymentTypeOptions = [
     "Payment of Commission",
     "Deposit payment",
@@ -287,16 +287,6 @@ const PaymentForm = () => {
             </select>
           </div>
 
-          {/* Red Text 2 */}
-          <div>
-            <label className="block text-sm mb-1">Повернуть иконку</label>
-            <input
-              type="text"
-              className="w-full p-2 border border-gray-700 rounded bg-gray-800"
-              value={rotateIcon}
-              onChange={(e) => setRotateIcon(+e.target.value)}
-            />
-          </div>
           <div>
             <label className="block text-sm mb-1">Красный текст 2</label>
             <input

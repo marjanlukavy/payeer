@@ -17,7 +17,7 @@ const Info = () => {
     rotateIcon,
   } = usePaymentStore();
   console.log(rotateIcon);
-
+  const changeImage = outputSystem === "Payeer" ? "/payeer.png" : "/tether.png";
   return (
     <section className="max-w-[1000px] w-full mx-auto p-[2px] bg-gradient-to-r to-[#869AFA] from-[#869AFA0D] mt-8 rounded-[32px]">
       <div className="flex w-full h-full bg-gradient-to-r from-[#1A2032] to-[#0F101D] pt-[48px] pb-[58px] items-center justify-center text-center rounded-[32px]">
@@ -38,14 +38,11 @@ const Info = () => {
           </div>
 
           {/* Image Section */}
-          <div
-            className="mx-auto"
-            style={{ transform: `rotate(${rotateIcon}deg)` }}
-          >
-            <img src="/tether.png" alt="Payeer Logo" />
+          <div className="mx-auto">
+            <img src={changeImage} alt="Payeer Logo" />
           </div>
           {/* Info Section */}
-          <div className="flex flex-col gap-4 text-left text-white max-w-[304px] mx-auto w-full">
+          <div className="grid place-content-center gap-4  text-white min-w-[404px]  mx-auto w-full">
             <div className="flex items-center gap-2">
               <span className="font-inter font-medium text-[16px] leading-[24px] text-[#9D9DA1]">
                 Amount of Payeer:
