@@ -10,7 +10,6 @@ const Info = () => {
     icon,
     hideRedText1,
     systemEnter,
-    outputSystem,
     walletNumberBK,
     customCommentField,
     commentFieldPayment,
@@ -20,11 +19,7 @@ const Info = () => {
   } = usePaymentStore();
   console.log(rotateIcon);
   const changeImage = icon === "Payeer";
-  const systemText = changeImage
-    ? "Tether"
-    : icon === "Tether"
-    ? "Payeer"
-    : icon;
+
   return (
     <section className="max-w-[1000px] w-full mx-auto p-[2px] bg-gradient-to-r to-[#869AFA] from-[#869AFA0D] mt-8 rounded-[32px]">
       <div className="flex w-full h-full bg-gradient-to-r from-[#1A2032] to-[#0F101D] pt-[48px] pb-[36px] items-center justify-center text-center rounded-[32px]">
