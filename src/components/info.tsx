@@ -7,7 +7,9 @@ const Info = () => {
     customPaymentType,
     walletNumber,
     redText1,
+    icon,
     hideRedText1,
+    systemEnter,
     outputSystem,
     walletNumberBK,
     customCommentField,
@@ -17,8 +19,12 @@ const Info = () => {
     rotateIcon,
   } = usePaymentStore();
   console.log(rotateIcon);
-  const changeImage = outputSystem === "Payeer";
-  const systemText = changeImage ? "Tether" : "Payeer";
+  const changeImage = icon === "Payeer";
+  const systemText = changeImage
+    ? "Tether"
+    : icon === "Tether"
+    ? "Payeer"
+    : icon;
   return (
     <section className="max-w-[1000px] w-full mx-auto p-[2px] bg-gradient-to-r to-[#869AFA] from-[#869AFA0D] mt-8 rounded-[32px]">
       <div className="flex w-full h-full bg-gradient-to-r from-[#1A2032] to-[#0F101D] pt-[48px] pb-[36px] items-center justify-center text-center rounded-[32px]">
@@ -28,10 +34,12 @@ const Info = () => {
             <h1 className="font-inter font-bold text-[32px] leading-[40px] tracking-[-1.2px] text-white">
               {customPaymentType}
             </h1>
-            <div className="max-w-[510px]">
+            <div className="">
               <p className="text-[#FA4750] font-inter font-medium text-[16px] leading-[24px] tracking-[-0.8px]">
-                {!hideRedText1 ? redText1 : null} {redText2} {systemText} wallet{" "}
-                {walletNumber}.
+                {!hideRedText1 ? redText1 : null}
+              </p>
+              <p className="text-[#FA4750] font-inter font-medium text-[16px] leading-[24px] tracking-[-0.8px]">
+                {redText2} {systemEnter} wallet {walletNumber}.
               </p>
             </div>
           </div>
@@ -62,7 +70,7 @@ const Info = () => {
 
             <div className="flex flex-col items-start">
               <span className="font-inter text-[16px] leading-[24px] text-[#fff]">
-                {depositAmount} - {currency}
+                {depositAmount} {currency}
               </span>{" "}
               <span className="font-inter text-[16px] leading-[24px] text-[#fff]">
                 {walletNumberBK}

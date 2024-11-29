@@ -10,13 +10,16 @@ const PaymentForm = () => {
     paymentType,
     walletNumber,
     walletNumberBK,
+    systemEnter,
     redText1,
     redText2,
+    icon,
     outputSystem,
     commentField,
     commentFieldPayment,
     paymentStatus,
     customCommentField,
+    setSystemEnter,
     hideRedText1,
     customPaymentType,
     setBlockedBalance,
@@ -25,6 +28,7 @@ const PaymentForm = () => {
     setDepositAmount,
     setCurrency,
     setPaymentType,
+    setIcon,
     setWalletNumber,
     setWalletNumberBK,
     setRedText1,
@@ -39,6 +43,7 @@ const PaymentForm = () => {
   } = usePaymentStore();
 
   const tags = ["Payeer", "Tether", "MIR", "Mastercard", "Visa"];
+  const images = ["Payeer", "Tether"];
   const paymentTypeOptions = [
     "Payment of Commission",
     "Deposit payment",
@@ -193,7 +198,10 @@ const PaymentForm = () => {
                   <button
                     key={tag}
                     type="button"
-                    onClick={() => setOutputSystem(tag)}
+                    onClick={() => {
+                      setOutputSystem(tag);
+                      setSystemEnter(tag);
+                    }}
                     className={`px-3 py-1 text-sm rounded-lg border border-gray-700 transition-all duration-200 ${
                       outputSystem === tag
                         ? "bg-white text-black shadow-md"
@@ -204,7 +212,39 @@ const PaymentForm = () => {
                   </button>
                 ))}
               </div>
-            </div>
+            </div>{" "}
+            <input
+              type="text"
+              className="w-40 px-3 py-2 border border-gray-700 rounded bg-gray-800 outline-none"
+              value={systemEnter}
+              onChange={(e) => setSystemEnter(e.target.value)}
+            />
+          </div>
+          <div className="flex justify-between items-center">
+            <div>
+              <label className="block text-sm font-medium text-white mb-1">
+                Смена значка
+              </label>
+              <div className="flex items-center gap-2">
+                {images.map((tag) => (
+                  <button
+                    key={tag}
+                    type="button"
+                    onClick={() => {
+                      setIcon(tag);
+                      console.log(icon);
+                    }}
+                    className={`px-3 py-1 text-sm rounded-lg border border-gray-700 transition-all duration-200 ${
+                      icon === tag
+                        ? "bg-white text-black shadow-md"
+                        : "bg-gray-800 text-white hover:bg-gray-500"
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            </div>{" "}
           </div>
 
           {/* Wallet Number BK */}
