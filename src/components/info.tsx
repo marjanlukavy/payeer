@@ -19,7 +19,7 @@ const Info = () => {
   } = usePaymentStore();
   console.log(rotateIcon);
   const changeImage = icon === "Payeer";
-
+  const hideWallet = systemEnter === "Payeer" || systemEnter === "Tether";
   return (
     <section className="max-w-[950px] w-full mx-auto p-[2px] container-bg mt-8 rounded-[32px] ">
       <div className="flex w-full h-full bg-gradient py-6 items-center justify-center text-center rounded-[32px]">
@@ -34,7 +34,8 @@ const Info = () => {
                 {!hideRedText1 ? redText1 : null}
               </p>
               <p className="text-[#FA4750] font-inter font-medium text-[16px] leading-[24px] tracking-[-0.8px]">
-                {redText2} {systemEnter} wallet
+                {redText2} {systemEnter}
+                {hideWallet ? " wallet" : null}
                 {walletNumber.length === 0 ? null : " " + walletNumber}.
               </p>
             </div>
