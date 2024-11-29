@@ -52,3 +52,38 @@ body {
     height: 40px;
   }
 }
+
+.container-bg {
+  position: relative;
+  border-radius: 5px; /* this doesn't work */
+  padding: 2px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.container-bg::before {
+  border-radius: 32px;
+  content: "";
+  background-image: radial-gradient(
+    116.3% 233.53% at 106.7% 3.01%,
+    #869afa 0%,
+    rgba(134, 154, 250, 0.05) 100%
+  );
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-gradient {
+  background: radial-gradient(
+      116.3% 233.53% at 106.7% 3.01%,
+      #1a2032 0%,
+      #0f101d 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
