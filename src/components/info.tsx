@@ -70,10 +70,10 @@ const Info = () => {
                 {depositAmount} {currency}
               </span>{" "}
               <span className="font-inter text-[16px] leading-[24px] text-[#fff]">
-                {walletNumberBK}
+                {walletNumberBK.length === 0 ? "‎ " : walletNumberBK}
               </span>{" "}
               <span className="font-inter text-[16px] leading-[24px] text-[#fff]">
-                {commentFieldPayment}
+                {commentFieldPayment.length === 0 ? "‎ " : commentFieldPayment}
               </span>{" "}
               <span className="font-inter text-[16px] leading-[24px] text-[#fff]">
                 {paymentStatus}

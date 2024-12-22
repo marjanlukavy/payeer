@@ -52,7 +52,7 @@ const PaymentForm = () => {
   ];
   const commentFieldOptions = ["Comment to payment:", "Personal ID:"];
   const paymentStatusOptions = ["Waiting for payment", "Accepted", "Declined"];
-  const currencyOptions = ["RUB", "USD", "EUR"];
+  const currencyOptions = ["RUB", "USD", "EUR", "USDT"];
 
   return (
     <form className="p-6 bg-gray-900 text-white max-w-[1240px] my-20 mx-auto rounded-lg space-y-6">
