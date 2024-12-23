@@ -36,7 +36,7 @@ const Info = () => {
               <p className="text-[#FA4750] font-inter font-medium text-[16px] leading-[24px] tracking-[-0.8px]">
                 {redText2} {systemEnter}
                 {hideWallet ? " wallet" : null}
-                {walletNumber.length === 0 ? null : " " + walletNumber}.
+                {walletNumber.length === 0 ? null : " " + walletNumber}
               </p>
             </div>
           </div>
